@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang=tr>
+
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="<%= description %>">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <title><%= title %> ー by <%= author %></title>
+      <link rel="stylesheet" type="text/css" href="/css/styles.css">
+   </head>
+
+   <body class="max-width mx-auto px3 ltr">
+      <div class="content index py4">
+         <article class="post">
+            <header>
+               <div>
+                  <h1 class="posttitle" itemprop="name headline"><%= title %></h1><%= description %>
+               <div class="meta">
+                  <b><span itemprop="name">Written by <%= author %></span>
+                  <div class="postdate">
+                     <br><time itemprop="datePublished">Published on <%= date %></time></b>
+                  </div>
+               </div>
+            </header>
+            <div class="content" itemprop="articleBody">
+               <%- post %>
+            </div>
+         </article>
+         <div id="footer-post-container">
+            <div id="footer-post">
+               <div id="share-footer" style="display: none">
+               </div>
+            </div>
+         </div>
+         <footer id="footer">
+            <div class="footer-left">
+               All Rights Reserved &copy; Alefben | Theme: <a href="https://github.com/probberechts/hexo-theme-cactus">Cactus Dark</a>
+            </div>
+         </footer>
+      </div>
+   </body>
+</html>

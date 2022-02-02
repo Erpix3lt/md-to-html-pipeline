@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Alefblog</title>
+      <link rel="stylesheet" href="/css/styles.css">
+   </head>
+   <body class="max-width mx-auto px3 ltr">
+      <div class="content index py4">
+         <header id="header">
+            <div id="title">
+               <h1 style="font-size: 2.5em;color:#ea849a">READMETOHTML - Example</h1>
+               Welcome to my blog. Have a nice read!
+            </div>
+            <div id="nav">
+               <b>
+                  <ul>
+                     <li><a href="/blog/">Homepage</a></li>
+                     <li><a href="/blog/posts/">My Posts</a></li>
+                  </ul>
+               </b>
+            </div>
+         </header>
+         <section id="writing">
+            <span class="h1" id="postsWritten"><a href="/blog/posts/">Here are some of my lastest posts</a></span>
+            <ul class="post-list">
+               <% for (i = 0; i < Math.min(postTitle.length, 3); i++) { %>
+               <% for (i = 0; i < Math.min(postDates.length, 3); i++) { %>
+               <li class="post-item">
+                  <div class="meta">
+                     <time><%= postDates[i] %></time>
+                  </div>
+                  <span>
+                  <a class="" href="/blog/posts/<%= postTitle[i].toLowerCase().replace(/ |,/g, "-"); %>"><%= postTitle[i] %></a>
+                  </span>
+               </li>
+               <% } %>
+               <% } %>
+               <li class="post-item">
+                  <a class="" href="/blog/posts/">... see all the posts</a>
+               </li>
+            </ul>
+         </section>
+
+         <footer id="footer">
+            <div class="footer-left">
+               All Rights Reserved &copy; Alefben | Theme: <a href="https://github.com/probberechts/hexo-theme-cactus">Cactus Dark</a>
+            </div>
+         </footer>
+      </div>
+   </body>
+</html>
